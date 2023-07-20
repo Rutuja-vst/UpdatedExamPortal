@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.exam.model.exam.Quiz;
 import com.exam.model.exam.UserQuiz;
 import com.exam.service.UserQuizService;
-@RestController
+
 @CrossOrigin("*")
+@RestController
 @RequestMapping("/userquiz")
 public class UserQuizController {
 	@Autowired

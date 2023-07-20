@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 
-@RestController
 @CrossOrigin("*")
+@RestController
 //@CrossOrigin(origins = "*")
 
 public class AuthenticateController {
@@ -34,7 +34,10 @@ public class AuthenticateController {
     @Autowired
     private JwtUtils jwtUtils;
 
-
+    @GetMapping("/test")
+    public String testMethod() {
+    	return "<h1>Hi Anup, this is test api<h1>";
+    }
     //generate token
 
     @PostMapping("/generate-token")
