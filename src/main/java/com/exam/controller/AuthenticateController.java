@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 
 @RestController
-//@CrossOrigin("*")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
+//@CrossOrigin(origins = "*")
 
 public class AuthenticateController {
 
@@ -41,7 +41,7 @@ public class AuthenticateController {
     public ResponseEntity<?> generateToken(@RequestBody JwtRequest jwtRequest) throws Exception {
 
         try {
-
+        	System.out.println(jwtRequest.getUsername());
             authenticate(jwtRequest.getUsername(), jwtRequest.getPassword());
 
 

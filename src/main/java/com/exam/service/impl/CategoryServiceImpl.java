@@ -29,7 +29,7 @@ public class CategoryServiceImpl implements CategoryService {
     public Set<Category> getCategories() {
         return new LinkedHashSet<>(this.categoryRepository.findAll());
     }
-
+    
     @Override
     public Category getCategory(Long categoryId) {
         return this.categoryRepository.findById(categoryId).get();
