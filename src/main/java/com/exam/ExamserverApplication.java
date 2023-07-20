@@ -49,41 +49,42 @@ public class ExamserverApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-       try {
-
-            System.out.println("starting code");
-
-            User user = new User();
-
-            user.setFirstName("ExamAdmin");
-            user.setLastName("Virtuoso");
-            user.setUsername("hr@vpel.in");
-            String pass="CDExswZAQ@123";
-            user.setPassword(this.bCryptPasswordEncoder.encode(pass));
-            user.setEmail("hr@vpel.in");
-            user.setProfile("Profile.png");
-
-            Role role1 = new Role();
-            role1.setRoleId(44L);
-            role1.setRoleName("ADMIN");
-
-            Set<UserRole> userRoleSet = new HashSet<>();
-            UserRole userRole = new UserRole();
-
-            userRole.setRole(role1);
-
-            userRole.setUser(user);
-
-            userRoleSet.add(userRole);
-
-           User user1 = this.userService.createUser(user, userRoleSet, pass );
-            System.out.println(user1.getUsername());
-
-
-        } catch(UserFoundException e) {
-            e.printStackTrace();
-
-        }
+      //       try {
+//
+//
+//            System.out.println("starting code");
+//
+//            User user = new User();
+//
+//            user.setFirstName("Rutuja");
+//            user.setLastName("Kahandal");
+//            user.setUsername("Rutuja@123");
+//            String pass="2003";
+//            user.setPassword(this.bCryptPasswordEncoder.encode(pass));
+//            user.setEmail("rutuja.kahandal@virtuososofttech.com");
+//            user.setProfile("Profile.png");
+//
+//            Role role1 = new Role();
+//            role1.setRoleId(44L);
+//            role1.setRoleName("ADMIN");
+//
+//            Set<UserRole> userRoleSet = new HashSet<>();
+//            UserRole userRole = new UserRole();
+//
+//            userRole.setRole(role1);
+//
+//            userRole.setUser(user);
+//
+//            userRoleSet.add(userRole);
+//
+//            User user1 = this.userService.createUser(user, userRoleSet, pass );
+//            System.out.println(user1.getUsername());
+//
+//
+//        } catch(UserFoundException e) {
+//            e.printStackTrace();
+//
+//        }
 
     }
     }   
